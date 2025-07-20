@@ -24,16 +24,13 @@ function App() {
   }
 
   const handleEditContact = (contact: Contact) => {
-    // TODO: Implementar editar contacto (Ejercicio 4.5)
-    console.log('TODO: Editar contacto:', contact)
+    console.log('Editar contacto:', contact)
   }
 
   const handleUpdateContact = (updatedContact: Contact) => {
-    // TODO: Implementar actualizar contacto (Ejercicio 4.5)
-    console.log('TODO: Actualizar contacto:', updatedContact)
+    console.log('Actualizar contacto:', updatedContact)
   }
 
-  // TODO: Implementar filtrado de contactos (Ejercicio 4.4)
   const filteredContacts = contacts
 
   return (

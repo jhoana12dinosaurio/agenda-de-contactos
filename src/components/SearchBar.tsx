@@ -13,7 +13,6 @@ function SearchBar({ searchTerm, onSearchChange }: SearchBarProps) {
         placeholder="Buscar contactos..."
         className="search-input"
       />
-      {/* TODO: Implementar funcionalidad de búsqueda (Ejercicio 4.4) */}
     </div>
   )
 }

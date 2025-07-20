@@ -51,7 +51,6 @@ function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: Conta
       
       <div className="form-actions">
         <button type="submit">
-          {/* TODO: Cambiar texto según si está editando o agregando (Ejercicio 4.5) */}
           Agregar
         </button>
         {editingContact && (

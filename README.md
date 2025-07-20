@@ -1,69 +1,88 @@
-# React + TypeScript + Vite
+# Examen Final del Curso
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Agenda de Contactos - Aplicación Base
 
-Currently, two official plugins are available:
+### Descripción del Proyecto
+Esta es una aplicación de agenda de contactos desarrollada con React, TypeScript y Vite. La aplicación cuenta con funcionalidades básicas implementadas que servirán como base para el examen final.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Estructura del Proyecto
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+agenda-de-contactos/
+├── src/
+│   ├── components/
+│   │   ├── ContactForm.tsx      # Formulario para contactos
+│   │   ├── ContactList.tsx      # Lista de contactos
+│   │   ├── SearchBar.tsx        # Barra de búsqueda
+│   │   └── ThemeToggle.tsx      # Toggle de tema
+│   ├── types/
+│   │   └── Contact.tsx          # Definición de tipos TypeScript
+│   ├── App.tsx                  # Componente principal
+│   ├── App.css                  # Estilos del componente principal
+│   ├── index.css                # Estilos globales
+│   └── main.tsx                 # Punto de entrada
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Tecnologías Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 18** - Biblioteca de UI
+- **TypeScript** - Tipado estático
+- **Vite** - Build tool y dev server
+- **CSS** - Estilos
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instrucciones para el Examen
+
+#### 1. Fork del Repositorio
+- Realiza un fork de este repositorio a tu cuenta de GitHub
+- Clona tu fork localmente
+
+#### 2. Instalación
+```bash
+cd agenda-de-contactos
+npm install
+npm run dev
 ```
+
+#### 3. Desarrollo
+- Implementa las funcionalidades requeridas según las instrucciones del examen
+- Asegúrate de mantener la estructura del proyecto
+- Utiliza TypeScript correctamente
+- Mantén un código limpio y bien organizado
+
+#### 4. Entrega
+- Realiza commits frecuentes con mensajes descriptivos
+- Sube tus cambios a tu repositorio fork
+- Envía el enlace de tu repositorio GitHub al profesor
+
+### Componentes Principales
+
+- **App.tsx**: Componente principal que maneja el estado global
+- **ContactForm**: Formulario para gestión de contactos
+- **ContactList**: Visualización de la lista de contactos
+- **SearchBar**: Campo de búsqueda
+- **ThemeToggle**: Botón para cambio de tema
+
+### Notas Importantes
+
+- La aplicación debe mantener su funcionalidad base
+- Los cambios deben ser incrementales
+- Se valorará la calidad del código y las buenas prácticas
+- Asegúrate de probar todas las funcionalidades antes de entregar
+
+### Criterios de Evaluación
+
+- Correcta implementación de las funcionalidades
+- Uso apropiado de React y TypeScript
+- Calidad y organización del código
+- Cumplimiento de los requisitos
+- Funcionalidad sin errores
+
+---
+
+**Fecha de entrega**: Según lo indicado por el profesor  
+**Formato de entrega**: Link al repositorio GitHub (fork)
+
+¡Éxito en tu examen!

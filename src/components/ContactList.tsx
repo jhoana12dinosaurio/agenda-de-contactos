@@ -20,7 +20,6 @@ function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
                 <span> - {contact.phone}</span>
               </div>
               <div className="contact-actions">
-                {/* TODO: Implementar botón de editar (Ejercicio 4.5) */}
                 <button onClick={() => onEdit(contact)}>Editar</button>
                 <button onClick={() => onDelete(contact.id)}>Eliminar</button>
               </div>
