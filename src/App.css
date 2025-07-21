@@ -5,17 +5,18 @@
 }
 
 .app-header {
-  background-color: #f0f0f0;
+  background-color: var(--header-bg);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .app-header h1 {
   margin: 0;
-  color: #333;
+  color: var(--text-color);
 }
 
 .app-main {
@@ -27,11 +28,12 @@
 }
 
 .form-section {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow);
   margin-bottom: 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form {
@@ -49,14 +51,17 @@
 
 .form-group label {
   font-weight: 600;
-  color: #555;
+  color: var(--secondary-text);
 }
 
 .form-group input {
   padding: 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .form-actions {
@@ -75,12 +80,12 @@
 }
 
 .form-actions button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4745d4;
   color: white;
 }
 
 .form-actions button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #2d2b8a;
 }
 
 .form-actions button[type="button"] {
@@ -93,10 +98,11 @@
 }
 
 .contacts-section {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-bar {
@@ -106,9 +112,12 @@
 .search-input {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-list ul {
@@ -122,7 +131,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
 }
 
 .contact-item:last-child {
@@ -144,7 +154,7 @@
 }
 
 .contact-actions button:first-child {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
 
@@ -169,14 +179,16 @@
 
 .theme-toggle {
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  background-color: #666;
-  color: white;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .theme-toggle:hover {
-  background-color: #555;
+  background-color: var(--header-bg);
+  transform: translateY(-1px);
 }

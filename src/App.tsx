@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Contact } from './types/Contact.tsx'
 import ContactForm from './components/ContactForm'
 import ContactList from './components/ContactList'
@@ -10,6 +10,12 @@ function App() {
   const [contacts, setContacts] = useState<Contact[]>([])
   const [searchTerm, setSearchTerm] = useState('')
   const [editingContact, setEditingContact] = useState<Contact | null>(null)
+
+  useEffect(() => {
+    const savedTheme = sessionStorage.getItem('theme');
+    const isDarkMode = savedTheme === 'dark';
+    document.body.className = isDarkMode ? 'dark-theme' : 'light-theme';
+  }, []);
 
   const handleAddContact = (contact: Omit<Contact, 'id'>) => {
     const newContact: Contact = {
