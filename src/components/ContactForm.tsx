@@ -12,7 +12,6 @@ function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: Conta
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
 
-  // Actualizar los campos cuando editingContact cambie
   useEffect(() => {
     if (editingContact) {
       setName(editingContact.name)
